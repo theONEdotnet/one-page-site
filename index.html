@@ -1,0 +1,70 @@
+
+<html>
+  <title></title>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="css/styles.css" rel="stylesheet">
+    
+  <script>
+    $(document).ready(function(){
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 900 &&  
+          $("nav").css("position") != "fixed"){
+          $("nav").hide(function(){
+            $("nav").css("position", "fixed")
+            $("nav").slideDown('1000')
+          })
+        }else if($(window).scrollTop() <= 900 ){
+          $(".nav").css("position", "initial")
+        }
+      })
+    })
+    </script>
+    <script>
+      var menu = $('nav ul');
+
+      $(window).resize(function(){
+         var w = $(window).width();
+         if(w > 768 && menu.is(':hidden')) {
+             menu.removeAttr('style');
+         }
+      });
+    </script>
+    
+    
+  </head>
+
+
+<body>
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#section1">Section-1</a></li>
+        <li><a href="#section2">Section-2</a></li>
+        <li><a href="#section3">Section-3</a></li>
+    </ul>
+</nav>
+  
+  <section id="section">
+  <h1>Home</h1>
+
+    </section>
+
+  <section id="section1">
+  <h1>Section 1</h1>
+
+    </section>
+
+  <section id="section2">
+  <h1>Section 2</h1> 
+
+    </section>
+
+  <section id="section3">
+  <h1>Section 3</h1>  
+
+    </section>
+
+</body>
+</html>
